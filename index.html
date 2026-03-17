@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livre de 4ème</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f0f4f8; text-align: center; margin:0; padding:0; }
+h1 { margin-top: 40px; color:#1e3a8a; }
+.container { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 50px; gap: 20px; }
+.button {
+  background:#2563eb; color:white; border:none; border-radius:10px; padding:20px 30px;
+  font-size:18px; cursor:pointer; width:180px; transition:0.2s;
+}
+.button:hover { background:#1d4ed8; transform: translateY(-3px); }
+</style>
+</head>
+<body>
+
+<h1>Livre de l'élève – 4ème</h1>
+<p>Cliquez sur une matière pour voir les thèmes / Haz clic en una materia para ver los temas</p>
+
+<div class="container">
+  <button class="button" onclick="location.href='allemand.html'">Allemand</button>
+  <button class="button" onclick="location.href='math.html'">Math</button>
+  <button class="button" onclick="location.href='physique-chimie.html'">Physique-Chimie</button>
+  <button class="button" onclick="location.href='espagnol.html'">Espagnol</button>
+  <button class="button" onclick="location.href='techno.html'">Techno</button>
+  <button class="button" onclick="location.href='anglais.html'">Anglais</button>
+  <button class="button" onclick="location.href='svt-francais.html'">SVT / Français</button>
+</div>
+
+</body>
+</html>
