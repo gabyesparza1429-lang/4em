@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathématiques – 4ème</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background:#cce7ff;
+  margin:0;
+  padding:40px 0;
+  display:flex;
+  justify-content:center;
+}
+.book {
+  background:#fff;
+  width:90%;
+  max-width:1000px;
+  min-height:700px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  position:relative;
+  padding:40px 30px 40px 90px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+.spiral {
+  position:absolute;
+  left:20px;
+  top:20px;
+  bottom:20px;
+  width:50px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+}
+.spiral div {
+  width:14px;
+  height:14px;
+  background:#555;
+  border-radius:50%;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+h1 { text-align:center; color:#1e3a8a; margin-top:0; font-size:2em; }
+p.subtitle { text-align:center; color:#64748b; margin-top:5px; font-size:1em; }
+.container { display:grid; grid-template-columns:repeat(2, 1fr); gap:25px; margin-top:40px; }
+.button {
+  background:#1e40af; color:white; border:none; border-radius:10px; padding:18px;
+  font-size:18px; cursor:pointer; transition:0.3s; width:100%; box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.button:hover { background:#1d4ed8; transform:translateY(-4px) scale(1.02); }
+.chapter-content { display:none; margin-top:30px; }
+.exercise { background:#f1f5f9; padding:15px; margin:10px 0; border-radius:8px; text-align:left; }
+.options button { display:block; margin:8px auto; padding:8px; font-size:16px; cursor:pointer; width:80%; border-radius:5px; }
+.feedback { font-weight:bold; margin-top:8px; text-align:center; }
+.back-btn { margin-top:20px; display:inline-block; padding:10px 20px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer; }
+@media(max-width:700px){ .container { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="book">
+  <div class="spiral">
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+
+  <h1>Mathématiques – 4ème</h1>
+  <p class="subtitle">Sélectionne un chapitre pour commencer / Selecciona un capítulo para comenzar</p>
+
+  <!-- Botones de capítulos -->
+  <div class="container">
+    <button class="button" onclick="showChapter('chap8')">Chapitre 8 – Géométrie plane</button>
+    <button class="button" onclick="showChapter('chap9')">Chapitre 9 – Théorème de Pythagore</button>
+    <button class="button" onclick="showChapter('chap10')">Chapitre 10 – Thalès / Cosinus</button>
+    <button class="button" onclick="showChapter('chap11')">Chapitre 11 – Géométrie dans l’espace</button>
+  </div>
+
+  <!-- CAPÍTULO 8 -->
+  <div id="chap8" class="chapter-content">
+    <h2>Chapitre 8 – Géométrie plane</h2>
+    <p>Objectif: Transformations simples, reconocer triángulos iguales, ejercicios paso a paso.</p>
+    <!-- Imagen o presentación opcional -->
+    <!-- <iframe src="cap8_presentation.html" width="100%" height="300"></iframe> -->
+    <div class="exercise">
+      <p>1. Traslada un triángulo 3 unidades a la derecha.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>2. Reconoce si dos triángulos son iguales.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>3. Calcula la altura de un triángulo dado.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <button class="back-btn" onclick="backToChapters()">Volver a capítulos</button>
+  </div>
+
+  <!-- CAPÍTULO 9 -->
+  <div id="chap9" class="chapter-content">
+    <h2>Chapitre 9 – Théorème de Pythagore</h2>
+    <p>Objectif: Usar Pitágoras para calcular lados y resolver ejercicios paso a paso.</p>
+    <!-- <iframe src="cap9_presentation.html" width="100%" height="300"></iframe> -->
+    <div class="exercise">
+      <p>1. Calcula la hipotenusa de un triángulo con catetos 3 y 4.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>2. Verifica si un triángulo con lados 5, 12 y 13 es rectángulo.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>3. Resuelve un problema práctico de triángulo en un mapa.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <button class="back-btn" onclick="backToChapters()">Volver a capítulos</button>
+  </div>
+
+  <!-- CAPÍTULO 10 -->
+  <div id="chap10" class="chapter-content">
+    <h2>Chapitre 10 – Thalès / Cosinus</h2>
+    <p>Objectif: Calcular longitudes y cosenos paso a paso.</p>
+    <!-- <iframe src="cap10_presentation.html" width="100%" height="300"></iframe> -->
+    <div class="exercise">
+      <p>1. Calcula la longitud de un segmento usando Thalès.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>2. Calcula el coseno de un ángulo en un triángulo rectángulo.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>3. Determina si dos rectas son paralelas.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <button class="back-btn" onclick="backToChapters()">Volver a capítulos</button>
+  </div>
+
+  <!-- CAPÍTULO 11 -->
+  <div id="chap11" class="chapter-content">
+    <h2>Chapitre 11 – Géométrie dans l’espace</h2>
+    <p>Objectif: Manipular pirámides y conos, calcular volúmenes paso a paso.</p>
+    <!-- <iframe src="cap11_presentation.html" width="100%" height="300"></iframe> -->
+    <div class="exercise">
+      <p>1. Calcula el volumen de una pirámide.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>2. Calcula el volumen de un cono.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <div class="exercise">
+      <p>3. Representa un objeto en el espacio 3D.</p>
+      <input type="text" placeholder="Respuesta">
+    </div>
+    <button class="back-btn" onclick="backToChapters()">Volver a capítulos</button>
+  </div>
+
+</div>
+
+<script>
+function showChapter(id){
+  document.querySelectorAll('.chapter-content').forEach(c=>c.style.display='none');
+  document.getElementById(id).style.display='block';
+  window.scrollTo(0,0);
+}
+function backToChapters(){
+  document.querySelectorAll('.chapter-content').forEach(c=>c.style.display='none');
+  window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
